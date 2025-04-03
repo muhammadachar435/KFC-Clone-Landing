@@ -1,0 +1,112 @@
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    color: white;
+    z-index: 1000;
+}
+
+.sidebar a {
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    transition: 0.3s;
+    width: 270px;
+}
+.sidebar a.sub-anchor{
+    font-size: 18px;
+    padding: 12px 16px;
+}
+
+.sidebar a:hover {
+    background: silver ;
+    transform: scale(1.1); 
+}
+/* .sidebar .close-btn */
+.sidebar .cln {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: crimson; /* More vibrant red */
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Perfectly centers the text/icon */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adds depth */
+    transition: all 0.3s ease-in-out; /* Smooth animation for hover effects */
+}
+
+.sidebar .close-btn:hover {
+    background-color: darkred; /* Changes color on hover */
+    transform: scale(1.2); /* Grows slightly on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Increases shadow on hover */
+}
+
+/* Three dots button styles */
+.dots-button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots-button div {
+    width: 8px;
+    height: 8px;
+/*            background-color: black;*/
+background-color: red;
+    border-radius: 50%;
+    margin: 4px 0;
+}
+
+                                        /* Responsive adjustments */
+
+@media (max-width: 768px) {
+    .sidebar a {
+        font-size: 16px;
+    }
+
+    .dots-button {
+    width: 35px;
+    height: 35px;
+    }
+
+    .dots-button div {
+    width: 7px;
+    height: 7px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar a {
+    font-size: 14px;
+    }
+
+    .dots-button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .dots-button div {
+        width: 6px;
+        height: 6px;
+    }
+}
+
+

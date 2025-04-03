@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .imgslider{
+       @apply xll:w-[1340px]  xll:h-[90vh] lg:w-[64rem] sm:w-[40rem] Galaxyz:w-[20rem] iphonese:w-[23.44rem] iphone14:w-[26.563rem] ipdmini:w-[48rem] lgbig:w-[90rem]  lgbig:h-[535px] ipdmini:max-w-full  ipdmini:h-full  ipdmini:object-cover Galaxyz:max-w-full Galaxyz:h-full Galaxyz:object-cover lg:max-w-full lg:h-full lg:object-cover;
+    }
+}  
+
+@layer utilities{
+    .buttons{
+        @apply lg:absolute lg:top-1/2 lg:left-2 lg:w-[98%] lg:flex lg:justify-between  Galaxyz:absolute Galaxyz:top-1/2 Galaxyz:left-2 Galaxyz:w-[95%] Galaxyz:flex Galaxyz:justify-between ipdmini:w-[98%];
+       
+    }
+}
+

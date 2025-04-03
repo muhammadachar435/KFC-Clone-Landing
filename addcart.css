@@ -1,0 +1,304 @@
+ #cart-icon{
+    position: relative;
+    display: flex;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#cart-icon .cart-item-count{
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 115, 64);
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    visibility: hidden;
+}
+
+.shop{
+    padding: 50px 9% 30px ;
+}
+
+.product-content{
+
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+   gap: 15px;
+}
+.product-box .img-box{
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top:30px;
+    justify-content:center;
+}
+
+.img-box img{
+    width: 200px;
+    transition: 0.5s;
+    border-radius:50%;
+}
+
+
+.product-box .product-title{
+    font-size: 19px;
+    margin-top: 15px;
+}
+
+.product-box .price-and-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+.price-and-cart .add-cart { 
+    position: absolute;
+    bottom: 1%;
+    left: 50%; 
+    transform: translateX(-50%); 
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(255, 111, 58);
+    border-radius: 6px;
+    font-size: 10px;
+    color: white;
+    cursor: pointer;
+    display: block;
+
+}
+
+.price-and-cart .add-cart:hover{
+    background-color: #C70039;
+   color:white;
+   cursor:pointer;
+}
+.cart {
+    position: fixed;
+    top: 0%;
+    right: -100%;
+    width: 350px;
+    height: 100%;
+    padding: 65px 20px 40px;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.15); 
+    z-index: 100;
+    overflow: hidden;
+    background: rgb(28, 24, 22);
+    border-radius:10px;
+  transition: 0.5s ease-in-out;
+}
+
+
+.cart-title{
+    text-align: center;
+    font-size: 30px;
+}
+.cart.active{
+    right: 0;
+}
+.cart-box{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.cart-box img{
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+.cart-detail{
+    display: grid;
+    gap: 8px;
+    margin: auto;
+}
+.cart-product-title{
+    font-size: 16px;
+    line-height: 1;
+}
+.cart-price{
+    font-weight: 500;
+}
+.cart-quantity{
+    display: flex;
+    width: 100px;
+    border: 1px solid #999;
+    border-radius: 6px;
+}
+.cart-quantity button{
+    background: transparent;
+    width: 30px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.cart-quantity #decrement{
+    color: #999;
+}
+.cart-quantity .number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    cursor: pointer;
+}
+.cart-remove img{
+    width: 24px;
+    height: 24px;
+}
+
+.cart-remove{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.total{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px soild #333;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.total-price{
+    margin-left: 10px;
+    font-weight: 600;
+}
+.btn-buy{
+    display: block;
+    padding: 10px 30px;
+    /* background-color: black; */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    margin: 20px auto 0;
+    cursor: pointer;
+}
+.btn-buy:hover{
+    background-color: #218838;
+}
+
+#cart-close{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    cursor: pointer;
+}
+  
+/* width:360px  */
+@media screen and  (min-width: 310px) and (max-width: 500px){
+    .product-content{
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+    .cart{
+        width: 100%;
+    }
+
+    .price-and-cart .add-cart { 
+        position: absolute;
+        bottom: 1%;
+        left: 50%; /* Move the button to the center of the container */
+        transform: translateX(-50%); /* Adjust the button to align horizontally */
+        padding: 10px;
+        text-align: center; /* Center text inside the button */
+        background-color: rgb(255, 111, 58);
+        border-radius: 6px;
+        font-size: 10px;
+        color: white;
+        cursor: pointer;
+        display: block;
+    }
+    
+
+}
+
+
+/* width:425px  */
+@media screen and (max-width:425px){
+    .product-content{
+        grid-template-columns: repeat(auto-fit,minmax(290px,320px));
+    }
+    .cart{
+        width: 100%;
+    }
+
+    .price-and-cart .add-cart { 
+        position: absolute;
+        bottom: 1%;
+        left: 50%; /* Move the button to the center of the container */
+        transform: translateX(-50%); /* Adjust the button to align horizontally */
+        padding: 10px;
+        text-align: center; /* Center text inside the button */
+        background-color: rgb(255, 111, 58);
+        border-radius: 6px;
+        font-size: 10px;
+        color: white;
+        cursor: pointer;
+        display: block;
+    }
+    
+}
+
+
+
+@media screen and  (min-width: 1300px) and (max-width: 1440px){
+    .product-content{
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        gap:30;
+    }
+    .cart{
+        width: 40%;
+    }
+
+    .price-and-cart .add-cart { 
+        position: absolute;
+        bottom: 1%;
+        left: 50%; /* Move the button to the center of the container */
+        transform: translateX(-50%); /* Adjust the button to align horizontally */
+        padding: 10px;
+        text-align: center; /* Center text inside the button */
+        background-color: rgb(255, 111, 58);
+        border-radius: 6px;
+        font-size: 10px;
+        color: white;
+        cursor: pointer;
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
+    .product-content {
+        grid-template-columns: repeat(4, 280px);
+        gap: 30px; /* Added px to 'gap' for proper spacing */
+    }
+    .cart {
+        width: 30%;
+    }
+    .shop{
+        padding: 50px 0% 30px ;
+    }
+    
+    .price-and-cart .add-cart { 
+        position: absolute;
+        bottom: 1%;
+        left: 50%; /* Move the button to the center of the container */
+        transform: translateX(-50%); /* Adjust the button to align horizontally */
+        padding: 10px;
+        text-align: center; /* Center text inside the button */
+        background-color: rgb(255, 111, 58);
+        border-radius: 6px;
+        font-size: 10px;
+        color: white;
+        cursor: pointer;
+        display: block;
+    }
+
+}

@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="icon" type="image/png" href="pic/kfclogo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="output.css">    <!-- Css Link -->
+    <link rel="stylesheet" href="slider.css">   <!-- Css Link -->
+    <link rel="stylesheet" href="addcart.css">  <!-- Css Link -->
+    <link rel="stylesheet" href="index.css">    <!-- Css Link -->
+    <link rel="stylesheet" href="sidebar.css">  <!-- Css Link -->
+    <link rel="stylesheet" href="favorite.css"> <!-- Css Link -->
+    <link rel="stylesheet" href="addcart.css"> <!-- Css Link -->
+    <link rel="stylesheet" href="sidebar.css"> <!-- Css Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="slider.js"></script> <!-- Script file link -->
+    
+    
+      <title>KFC Pakistan</title>
+
+
+</head>
+
+<body class="bg-[#000000] text-white bg-gradient-to-b from-black to-black- to-black ">
+ 
+                              <!-- Javascript Files -->
+
+<script src="sidebar.js"></script>
+<script src="popout.js"></script>
+
+                              <!-- Animation script  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+       
+                                        <!--Navbar  -->
+
+<nav class="nav-container  relative lg:pt-4  lg:h-20">
+        
+
+                                    <!-- Toggle Button -->
+
+
+<div class="dots-button text-white ipdmini:px-10 ipdmini:pt-5  lg:pl-12" onclick="openSidebar()">
+    <span class="Galaxyz:text-xl Galaxyz:text-white  ipdmini:text-4xl"><ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon></span>           
+</div> 
+
+<span class="nav-log Galaxyz:text-base font-bold lg:px-3 text-red-600  Galaxyz:absolute Galaxyz:right-4 Galaxyz:top-[1px] ipdmini:left-16 ipdmini:text-3xl ipdmini:absolute ipdmini:mt-[5px] italic lg:top-5"><a href="homepage.html">KFC</a></span>
+
+<form id="form-login">
+<button class="Galaxyz:hidden ipdmini:block ipdmini:right-4 ipdmini:absolute ipdmini:top-[13px] uppercase w-[70px] rounded outline outline-2 outline-red-600 p-1 text-white text-base font-bold lg:mt-4 bg-red-600 text-center lg:mx-10 hover:scale-105" type="submit">Login</button>
+</form>
+
+ <!-- End Logo  -->
+
+
+                            <!--Delievery and pickup Button   -->
+
+<ul class=" Galaxyz:mt-4 ipdmini:flex ipdmini:pt-4 ipdmini:pb-3 Galaxyz:pr-5 ipdmini:justify-end lg:absolute lg:top-[-4px] lg:left-40 ">
+   
+                          
+                              <!-- Delievery Button  -->
+ 
+<div class="flex Galaxyz:space-x-5 Galaxyz:px-2  iphonese:ml-[15px] iphonese:space-x-10 iphone14:ml-[35px] iphone14:space-x-14 lg:space-x-0">
+
+<form id="delievery">    
+<li><button type="submit" class="uppercase Galaxyz:w-[102px] rounded outline hover:outline-4 hover:scale-105 outline-2 outline-red-600 p-1 text-white Galaxyz:text-sm font-bold  Galaxyz:ml-[16px]" style="background-color: rgb(28, 24, 22);"> <img src="pic/bike.png" alt="" class="inline Galaxyz:w-[20px] " >&nbsp;delivery</button></li>
+</form>
+
+                              <!-- Pickup Button   -->
+
+<form id="pickup-form">
+<li><button type="submit" class="uppercase Galaxyz:w-[100px]  rounded outline hover:outline-4 hover:scale-105 outline-2 outline-red-600 outl p-1 text-white text-base  Galaxyz:text-sm font-bold lg:mt-auto lg:mx-10 ipdmini:mr-[140px] lg:mr-0" style="background-color: rgb(28, 24, 22);"><img src="pic/pickup.png" alt="" class="inline Galaxyz:w-[20px]" >&nbsp;Pickup</button></li>
+</form>
+
+
+                                   <!--Add to Cart Logo  -->
+<header>    
+<div id="cart-icon" class="w-8 ml-[10px] px-1  lg:ml-[380px] lg:pt-1 lgbig:ml-[790px] xll:ml-[700px]">
+    <img src="pic/milkshake (1).png" alt="" class="h-8 Galaxyz:h-6 hover:scale-105 w-6 Galaxyz:w-5 ipdmini:mr-[2px]">
+    <span class="cart-item-count quantity  Galaxyz:absolute Galaxyz:top-10 Galaxyz:right-2 Galaxyz:bg-red-500 Galaxyz:rounded-full w-4 h-4 flex items-center justify-center text-center ipdmini:mt-1"></span>
+</div>
+</header>
+
+</div>  <!-- End Delievery and pickup button  -->
+</ul>
+
+                              <!--Add to cart  -->
+
+<div class="cart">
+    <h2 class="cart-title">Your Cart</h2>
+<div class="cart-content">
+<!-- <div class="cart-box">
+    <img src="img3.jpeg" class="cart-img" alt="Product Image">
+<div class="cart-detail">
+    <h2 class="cart-product-title">Casual Black Polo</h2>
+    <span class="cart-price">$100</span>
+<div class="cart-quantity">
+<button id="decrement">-</button>
+    <span class="number">1</span>
+    <button id="increment">+</button>
+    
+</div>
+</div>
+<i class="cart-remove"><img src="Delete.png" alt=""></i>
+</div>   -->
+
+</div>
+<div class="total">
+<div class="total-title">Total</div>
+<div class="total-price">$0</div>
+
+</div>
+                    
+<button class="btn-buy">Buy Now</button>
+<i id="cart-close"><img src="close.png" alt=""></i>
+</div>
+                        
+
+</nav>    <!--End Navbar  -->
+
+                               
+                                         <!-- Pickup -->
+ 
+<section>                                        
+
+<div class="pickup hidden fixed top-[65%]  Galaxyz:top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[1000] w-[450px] Galaxyz:w-[280px] Galaxyz:h-[55vh] h-[63vh] shadow-md rounded-lg" id="pickup" style="color:black; background-color: rgb(28, 24, 22)">
+<hr>
+    
+<div class="pickup-content w-[450px] h-[63vh] m-auto  Galaxyz:[280px] Galaxyz:h-[50vh]">
+<div class="space-x-3 absolute top-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        
+    <span class="w-10  h-5 Galaxyz:w-5 Galaxyz:h-2 p-1 bg-red-700 text-red-700">.</span>
+    <span class="w-10 h-5 p-1 Galaxyz:w-5 Galaxyz:h-2 bg-red-700 text-red-700">.</span>
+    <span class="w-10 h-5 p-1 Galaxyz:w-5 Galaxyz:h-2 bg-red-700 text-red-700">.</span>
+        
+</div>
+                                                                                                    
+<div class="absolute top-[-4px] right-[-4px]">
+    <button id="close-pickup">  <img src="pic/pickupclose.png" alt="Close"> </button>
+</div>
+                                                                                                    
+    
+<div class="absolute top-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-xl Galaxyz:text-sm text-white">
+<h1>Pickup Your Order</h1>
+</div> 
+                                                    
+    
+<div><hr class="mt-20 h-2"></div>
+    
+<div class="small-container w-[435px] Galaxyz:w-[260px] Galaxyz:mx-1">
+                                            
+    <input type="text" id="addressInput" placeholder="Enter a location..." class="w-full p-2 text-base mb-2 border border-gray-300 rounded-md ml-1 text-black hover:outline-2 hover:outline-red-500">
+    <img src="pic/location.png" alt="" srcset="" class="absolute right-4 top-24 Galaxyz:top-[112px]">
+        
+<div id="suggestions" class="mt-2  max-w-xl bg-white border border-gray-300 rounded-md shadow-md ml-2"></div>
+<div id="error-message" class="mt-2 text-red-500 Galaxyz:text-sm Galaxyz:ml-3 hidden">Unable to fetch suggestions. Please try again.</div>
+                                                    
+
+</div>
+</div>
+    
+<script src="Map.js"></script>
+                                                     
+</div>   <!-- End Pickup   -->
+    
+</section>   <!-- End Pickup Section  -->
+    
+
+                                   <!-- Delievery -->
+                                                
+<section id="Delievry">                   
+
+<div class="Deliever-up hidden fixed top-[320px]  left-2/4 transform -translate-x-1/2 -translate-y-1/2 z-[1000] lg:w-[600px] Galaxyz:w-[300px] Galaxyz:h-[75vh] lg:h-[78vh] shadow-md rounded-lg" id="deliever" style="color:black; background-color: rgb(28, 24, 22);">
+<hr>
+
+<div class="Delieverup-content lg:w-[580px] lg:h-[69vh] lg:m-auto">
+<div class="space-x-3 absolute top-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                                
+    <span class="lg:w-10  lg:h-5 Galaxyz:w-5 Galaxyz:h-2 p-1 bg-red-700 text-red-700">.</span>
+    <span class="lg:w-10  lg:h-5 Galaxyz:w-5 Galaxyz:h-2 p-1 bg-red-700 text-red-700">.</span>
+    <span class="lg:w-10  lg:h-5 Galaxyz:w-5 Galaxyz:h-2 p-1 bg-red-700 text-red-700">.</span>
+                                          
+</div> 
+                                        
+                                 <!--Button  -->
+
+                                
+<div class="absolute lg:top-[-4px] lg:right-[-4px] Galaxyz:right-[-5px] Galaxyz:top-[-5px]">
+<button id="close-delievery">  <img src="pic/pickupclose.png" alt="Close"> </button>
+</div>
+                                    
+
+                                <!--heading  -->
+                                                                    
+                                    
+<div class="absolute lg:top-14  lg:left-[420px] Galaxyz:left-40 Galaxyz:top-10  transform -translate-x-1/2 -translate-y-1/2 font-bold lg:text-xl Galaxyz:text-base text-white lg:w-[560px] Galaxyz:w-[280px]">
+<h4>Select Your Location for Delivery</h4>
+</div> 
+                                                                                                                            
+<div>
+<hr class="lg:mt-12 lg:h-2 Galaxyz:mt-14 Galaxyz:w-[250px] Galaxyz:mx-5 lg:w-[315px] lg:mx-32">
+</div>
+                                    
+</div>
+                                                                                    
+<div class="absolute left-2/4 -translate-x-1/2 -translate-y-1/2 lg:top-[220px] Galaxyz:top-[160px] rounded-lg ring-2 ring-slate-400 p-3">
+
+                  
+                    <!-- Frame for Galaxyz:500 and below -->
+
+<iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57675.54718999704!2d68.29010088596952!3d25.38064205981961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394c71caeb446263%3A0x29e9428caba411a8!2sKFC%20Qasim%20Chowk!5e0!3m2!1sen!2s!4v1737399700706!5m2!1sen!2s" 
+    class="w-[150px] h-[80px] border-0 block Galaxyz:hidden"
+    allowfullscreen=""
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+    </iframe> 
+  
+              <!-- Frame for Galaxyz:500 above and lg: below  -->
+
+<iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57675.54718999704!2d68.29010088596952!3d25.38064205981961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394c71caeb446263%3A0x29e9428caba411a8!2sKFC%20Qasim%20Chowk!5e0!3m2!1sen!2s!4v1737399700706!5m2!1sen!2s" 
+    class="w-[240px] h-[140px] border-0 hidden Galaxyz:block lg:hidden"
+    allowfullscreen=""
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+    
+</iframe> 
+  
+                       <!-- Frame for lg:500 above -->
+
+<iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57675.54718999704!2d68.29010088596952!3d25.38064205981961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394c71caeb446263%3A0x29e9428caba411a8!2sKFC%20Qasim%20Chowk!5e0!3m2!1sen!2s!4v1737399700706!5m2!1sen!2s" 
+    class="w-[500px] h-[220px] border-0 hidden lg:block"
+    allowfullscreen=""
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+    
+</iframe>
+  
+</div>
+                                                                                      
+<div class="absolute flex lg:top-[355px] Galaxyz:top-64 Galaxyz:text-sm Galaxyz:left-3 lg:left-10 text-white lg:text-base"><input type="checkbox"  name="" class="Galaxyz:mb-5 lg:mb-0"><p>&nbsp;&nbsp;&nbsp;</p><p>Kindly enable your location or use Search Location</p></div>
+                                                                                    
+                                    <!--Button  -->
+<div class="button-del absolute Galaxyz:absolute Galaxyz:bottom-20 Galaxyz:left-[25%] lg:bottom-3 lg:left-80  bg-red-500 text-white p-1 px-3  Galaxyz:px-2  rounded-lg font-serif font-bold Galaxyz:text-sm hover:bg-slate-600 cursor-pointer">
+<button class="">Confirm Location</button>
+</div>                                                                                 
+                                     <!--Button  -->
+<div class="button-del lg:absolute Galaxyz:absolute Galaxyz:bottom-[30px] lg:bottom-3 Galaxyz:left-[25%] lg:left-[25%]  bg-red-500 text-white p-1 px-3 Galaxyz:px-3 rounded-lg font-serif font-bold Galaxyz:text-sm hover:bg-slate-600 cursor-pointer">
+<button class="">Start Your Order</button>
+</div>
+                                                                                    
+                                    
+<script src="Delievery.js"></script>    <!-- Script File  -->
+                                                                                                        
+</div>   <!-- End Delievery Div  -->
+                                                                                    
+</section>      <!-- End Delievery Section -->
+                                    
+
+
+                                      <!--SideBar  -->
+
+<section>
+
+<div id="sidebar" class="sidebar">
+     
+    <span class="close-btn absolute bg-red-500 text-white rounded-full  border-red-600 right-1 top-[1px] items-center justify-center  text-center cursor-pointer w-6 h-6" onclick="closeSidebar()">&times;</span>
+    <img src="pic/kfcLgo.png" alt="" class="w-10 h-10 object-cover absolute left-2 top-10">
+    
+<button id="" class="bg-red-500 text-white  text-base font-bold font-serif p-1 px-3 absolute top-12 right-2 rounded">LOGIN</button>
+<hr class="mt-12 w-56 mx-auto border border-b-1 border-slate-300 ">
+       
+    <a href="#"> <img src="pic/homeAdress.png" alt="" >&nbsp; Store Locator</a>
+    <a href="#"><img src="pic/Track.png" alt="">&nbsp; Track Order</a>
+    <a href="#"> <img src="pic/menu.png" alt="">&nbsp; Explore Menu</a>
+       
+<hr class="mt-1 w-56 mx-auto border border-b-1 border-slate-300 ">
+       
+    <a href="#" class="sub-anchor">About us</a>
+    <a href="#" class="sub-anchor">FeedBack</a>
+    <a href="#" class="sub-anchor">Terms And Conditions</a>
+    <a href="#" class="sub-anchor">Privacy Policy</a>
+    <a href="#" class="sub-anchor">Contact us</a>
+    <a href="#" class="sub-anchor">Mitao Bhook</a>
+    <a href="#" class="sub-anchor">Mitao Bhook-Scholarship</a>
+                                                         
+</div>  <!-- End SideBar -->
+                                                
+</section>     <!--End SideBar  -->
+
+
+
+                                         
+                                        <!--Login Window -->
+                                        
+<section id="login">
+                                                
+<div class="popup hidden fixed top-[55%] lg:top-[58%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+z-[1000] w-[650px]  h-[60vh] lg:h-[60vh] shadow-md rounded-lg border-4 border-double border-black" id="pop-up" style="background-color: rgb(28, 24, 22)">
+                                                                                            
+<div class="popup-content p-5 rounded-lg ">
+                                                                                               
+
+                                       <!-- Animation Image -->     
+                                            
+                                   
+<dotlottie-player src="https://lottie.host/b0fb1563-45bc-44c6-bd80-b4b1b7abb2f3/RHP3ZvrgPw.lottie" background="transparent" speed="1" style="width: 300px; height: 270px" direction="1" playMode="normal" loop autoplay class="mt-6 lg:mt-10"></dotlottie-player>
+<button id="close" class="absolute  right-[-16px] top-[-16px]"><img src="pic/close.png" alt="" srcset=""></button>
+                                                                                                
+<div class="absolute left-[50%] bottom-4 mt-2 lg:absolute lg:top-0">
+                                                                                                
+
+                                       <!-- Animation Image -->
+                                            
+                                   
+<dotlottie-player src="https://lottie.host/464f0c45-be89-416d-a67c-20b9c0c17334/Kh1sTSgu1B.lottie" background="transparent" speed="1" style="width: 300px; height: 40px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+                                                                                                
+<form action="" class="grid grid-cols-1 gap-4 bg-white text-black p mt-3 xll:mt-10 pb-5 rounded pt-6 w-[300px] outline-4 outline-double outline-red-500">
+                                                                                                
+    <label class="font-serif font-bold mx-10 ">Phone number</label>
+    <input type="text" placeholder="+92 3XXXXXXXXX" class="border-b-2 border-b-red-500  w-56 p-1 mx-auto ">
+    <img src="pic/phone.png" alt="" srcset="" class="absolute left-3 top-[127px]">
+                                                                                                                 
+<div class=" grid grid-cols-1 gap-4 ">
+                                                                                                
+<button class="relative w-64 px-6 py-3 mx-auto text-white font-semibold rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 hover:from-blue-500 hover:to-purple-500 transition duration-300"> LOGIN </button> 
+                                                                                            
+<button class="relative w-64 px-10 py-3 mx-auto text-white font-semibold rounded-lg bg-red-600  transition duration-300">
+    <img src="pic/google.png" alt="" srcset="" class="inline absolute left-0">LOGIN WITH GOOGLE</button>
+                                                                                            
+
+</div><!-- End Button div  -->
+
+</form>  <!--End Form  -->
+
+</div> 
+                                            
+</div>
+                                                
+</div>   <!--End LOGIN Window -->
+                      
+</section>    <!-- End LOGIN Section -->
+                                            
+
+
+
+                                              <!--Image Slider  -->
+ 
+<div class="slider xll:w-[1340px] xll:h-[90vh] sm:w-[640px] iphone14:w-[425px] iphonese:w-[375px] lg:w-[1024px] Galaxyz:w-[320px] lgbig:w-[1440px] lgbig:h-[535px] ipdmini:w-[48rem] Galaxyz:max-w-full lg:max-w-full ipdmini:h-[63vh]  Galaxyz:h-[55vh] lg:h-[453px] Galaxyz:mx-0 lg:mx-auto Galaxyz:relative lg:relative Galaxyz:overflow-hidden lg:overflow-hidden lg:mt-16 Galaxyz:mt-10 ">
+<div class="list lg:absolute Galaxyz:absolute ipdmini:absolute lg:top-0 lg:left-0 lg:h-full lg:flex lg:w-max lg:transition-all lg:duration-1000 Galaxyz:top-0 Galaxyz:left-0 Galaxyz:h-full Galaxyz:flex Galaxyz:w-max Galaxyz:transition-all Galaxyz:duration-1000 ">
+
+                               <!-- Slide iImage-1 -->
+
+<div class="item">
+    <img src="pic/slide13.jpg" alt="" class="imgslider">    
+</div>
+ 
+                               <!-- Slide iImage-2 -->
+
+<div class="item">
+    <img src="pic/slide10.jpg" alt="" class="imgslider">    
+</div>
+    
+                             <!-- Slide iImage-3 -->    
+
+<div class="item">
+    <img src="pic/slide5.png" alt="" class="imgslider">    
+</div>
+    
+                             <!-- Slide iImage-4 -->
+
+<div class="item">
+    <img src="pic/slide4.png" alt="" class="imgslider">    
+</div>
+    
+                             <!-- Slide iImage-5 -->
+
+<div class="item">
+    <img src="pic/slidefre2.jpg" alt="" class="imgslider">    
+</div>
+     -
+</div> <!-- End Imageslide Div -->
+
+    
+                                 <!-- button prev and next -->
+    
+<div class="buttons">
+    <button id="prev" class="btnmove "><img src="pic/right-arrow.png" alt="" ></button>
+    <button id="next" class="btnmove"><img src="pic/left-arrow.png" alt=""></button>
+</div>
+    
+                                   <!-- dots five item -->
+
+<ul class="dots lg:text-white lg:dots lg:absolute  lg:bottom-2  lg:left-0 lg:w-full lg:m-0 lg:p-0 lg:flex lg:justify-center lg:transition-all lg:duration-1000 Galaxyz:text-red Galaxyz:dots Galaxyz:absolute  Galaxyz:bottom-2 Galaxyz:left-0 Galaxyz:w-full Galaxyz:m-0 Galaxyz:p-0 Galaxyz:flex Galaxyz:justify-center Galaxyz:transition-all Galaxyz:duration-1000">
+
+    <li class="lg:list-none lg:w-[10px] lg:h-[10px] lg:mx-1 lg:bg-white lg:my-5 rounded-full lg:active:bg-red-500  Galaxyz:list-none Galaxyz:w-[10px] Galaxyz:h-[10px] Galaxyz:mx-1 Galaxyz:bg-white Galaxyz::my-5 Galaxyz:rounded-full Galaxyz:active:bg-red-500"></li>
+    <li class="lg:list-none lg:w-[10px] lg:h-[10px] lg:mx-1 lg:bg-white lg:my-5 rounded-full lg:active:bg-red-500  Galaxyz:list-none Galaxyz:w-[10px] Galaxyz:h-[10px] Galaxyz:mx-1 Galaxyz:bg-white Galaxyz::my-5 Galaxyz:rounded-full Galaxyz:active:bg-red-500"></li>
+    <li class="lg:list-none lg:w-[10px] lg:h-[10px] lg:mx-1 lg:bg-white lg:my-5 rounded-full lg:active:bg-red-500  Galaxyz:list-none Galaxyz:w-[10px] Galaxyz:h-[10px] Galaxyz:mx-1 Galaxyz:bg-white Galaxyz::my-5 Galaxyz:rounded-full Galaxyz:active:bg-red-500"></li>
+    <li class="lg:list-none lg:w-[10px] lg:h-[10px] lg:mx-1 lg:bg-white lg:my-5 rounded-full lg:active:bg-red-500  Galaxyz:list-none Galaxyz:w-[10px] Galaxyz:h-[10px] Galaxyz:mx-1 Galaxyz:bg-white Galaxyz::my-5 Galaxyz:rounded-full Galaxyz:active:bg-red-500"></li>
+    <li class="lg:list-none lg:w-[10px] lg:h-[10px] lg:mx-1 lg:bg-white lg:my-5 rounded-full lg:active:bg-red-500  Galaxyz:list-none Galaxyz:w-[10px] Galaxyz:h-[10px] Galaxyz:mx-1 Galaxyz:bg-white Galaxyz::my-5 Galaxyz:rounded-full Galaxyz:active:bg-red-500"></li>
+        
+</ul>
+
+<script src="imgslider.js"></script>
+
+</div>   <!--Image Slider  -->
+
+
+                                      <!-- Reorder Button -->
+
+<div class="lg:uppercase lg:mt-8 lg:bg-red-600 lg:decoration-red-600 lg:text-white lg:rounded lg:w-6/12 lg:tracking-wider lg:font-bold lg:text-center lg:p-2 lg:mx-auto cursor-pointer duration-100 lg:hover:outline-2 lg:outline-red-500 lg:text-base lg:duration-100  Galaxyz:uppercase Galaxyz:mt-8 Galaxyz:bg-red-600 Galaxyz:decoration-red-600 Galaxyz:text-white Galaxyz:rounded Galaxyz:w-11/12 Galaxyz:tracking-wider Galaxyz:font-bold Galaxyz:text-center Galaxyz:p-2 Galaxyz:mx-auto  Galaxyz:hover:outline-2 Galaxyz:outline-red-500 Galaxyz:text-sm Galaxyz:duration-100"  data-aos="zoom-out-right" data-aos-duration="1000">
+    <a href=""  style="font-family: Arial, sans-serif;">Reorder</a>
+</div>
+
+                                       <!-- ViewAll Button -->
+<div class="Galaxyz:absolute Galaxyz:right-1 Galaxyz:top-[500px] lg:hidden ipdmini:hidden" data-aos="fade-right">
+    <a href="" class=" hover:text-red-500 font-bold">View All</a>
+</div>
+
+
+                               <!--Explore Menu Section  -->
+
+<div class=" overflow-hidden lg:uppercase xll:text-2xl lgbig:text-3xl iphonese:pl-4 lg:font-serif lg:font-bold lg:text-xl lg:mt-20 lg:p-5  Galaxyz:uppercase Galaxyz:font-serif Galaxyz:font-bold Galaxyz:text-base Galaxyz:mt-20  Galaxyz:p-2 ipdmini:px-6 ipdmini:text-xl" data-aos="zoom-in-right" >
+
+    <p class="text-white">Explore menu</p>
+    <hr class="lg:w-[60px]  lg:border-2 lg:border-t lg:border-red-500 Galaxyz:w-[50px] Galaxyz:bottom-2 Galaxyz:border-t-2 Galaxyz:border-red-500 ipdmini:w-[60px]">
+
+</div>
+                               
+<br>
+
+<div class="hidden lg:block">
+
+<section class="product">
+
+    <button class="pre-btn"><img src="pic/arrow.png" alt="Previous"></button>
+
+<div class="product-container">
+
+<div class="product-card">
+<div class="product-image"> 
+   <img src="pic/Burger.png" class="product-thumb" alt="">
+</div>
+
+<div class="product-info">
+    <h2 class="product-brand text-base mt-1"><a href="#">Zinger Burger</a></h2>
+    <hr class="w-4/12 border-2 border-t border-red-500 ml-3">
+</div>
+
+</div> <!--End Image Div  -->
+   
+
+<div class="product-card">
+<div class="product-image mt-4">
+    <img src="pic/Roll.png" class="product-thumb" alt="">
+</div>
+
+<div class="product-info">
+    <h2 class="product-brand mt-7"><a href="">Chicken Roll</a></h2>
+    <hr class="w-4/12  border-2 border-t border-red-500 ml-3 ">
+</div>
+</div> <!-- End Image div -->
+        
+
+
+<div class="product-card">
+<div class="product-image1">
+    <img src="pic/friespepsi.png" class="product-thumb" alt="">
+</div>
+
+<div class="product-info">
+    <h2 class="product-brand"><a href="">Signatue-Boxes</a></h2>
+    <hr class="w-4/12  border-2 border-t border-red-500 ml-3 ">
+</div>
+</div> <!-- End Image div -->
+        
+        
+
+<div class="product-card p-2">
+<div class="product-image3">
+   <img src="pic/immg1.jpg" class="product-thumb" alt="">
+</div>
+
+<div class="product-info">
+    <h2 class="product-brand"><a href="">Turkey Burger</a></h2>
+    <hr class="w-4/12  border-2 border-t border-red-500 ml-3 ">
+</div>
+</div> <!-- End Image div -->
+        
+ 
+
+<div class="product-card pt-3">
+<div class="product-image5">
+    <img src="pic/imag5.jpeg" class="product-thumb" alt="">
+</div>
+
+<div class="product-info">
+
+    <h2 class="product-brand"><a href="">Krunch Burger</a></h2>
+    <hr class="w-4/12  border-2 border-t border-red-500 ml-3 ">
+
+</div> 
+
+</div> <!-- End Image div -->
+        
+
+<div class="product-card">
+<div class="product-image6">
+    <img src="pic/image6.jpeg" class="product-thumb" alt="">
+</div>
+
+<div class="product-info">
+    <h2 class="product-brand"><a href="">Zingeratha</a></h2>
+    <hr class="w-4/12  border-2 border-t border-red-500 ml-3 ">
+
+</div> 
+
+</div> <!-- End Image div -->
+    
+
+                         
+</div> 
+
+                    <!--product next Button -->
+<button class="nxt-btn"><img src="pic/arrow.png" alt="Next"></button>
+  
+<script src="script.js"></script>
+
+
+</section>  
+</div>
+ <!-- End Section -->
+
+
+
+                                <!--Explore Menu Phones  -->
+
+<div class="explore-burger flex lg:hidden ipdmini:px-6 iphonese:pl-3" data-aos="fade-down" data-aos-duration="1000">
+
+<div class="burger1 p-1 border-2 border-dotted border-white w-[35%] h-[230.3px] ml-1 rounded-lg ipdmini:w-[45%] ipdmini:h-[255px]  ">
+
+  <a class="hover:transition-all hover:text-red-500 mt-3 ipdmini:text-xl Galaxyz:text-sm">Everyday Family</a>
+  <img src="pic/zingerstack.png" alt="" class="w-[90px] mt-16 mx-auto ipdmini:w-[140px] ipdmini:mx-auto ipdmini:mt-8 ">
+
+</div>
+
+<div class="burger-part ml-2 w-[185px]  h-[230.3px] relative ipdmini:w-[460px] ipdmini:h-[256px] iphone14:w-[240px]  ">
+
+<div class="w-[90.33px] h-[112.3px] ipdmini:w-[200px]  iphone14:w-[117px] border-2 border-dotted border-white absolute top-0 left-0 rounded-lg">
+
+    <a href="#"> <p class="p-1 ipdmini:pt-1 cursor-pointer hover:text-red-500" style="font-size: 12px;">Ala-carte-&-combos</p> </a>
+    <img src="pic/krunch2.jpeg" alt="" class="w-12 h-12  mx-auto mt-2 rounded-full ipdmini:w-14 ipdmini:h-14">    
+
+</div>
+
+<div class="w-[90.33px] h-[112.3px] ipdmini:w-[200px] iphone14:w-[117px] border-2 border-dotted border-white absolute top-0 right-0 rounded-lg">
+
+    <a href="#"> <p class="p-1 ipdmini:pt-1 cursor-pointer hover:text-red-500" style="font-size: 12px;">Signature-Boxes</p> </a>
+    <img src="pic/zingerstack.png" alt="" class="w-16 mt-2 mx-auto my-auto rounded-full ipdmini:w-14 ipdmini:h-14">    
+
+</div>
+
+<div class="w-[90.33px] h-[112.3px] ipdmini:w-[200px] iphone14:w-[117px] border-2 border-dotted border-white absolute bottom-0 left-0 rounded-lg">
+
+    <a href="#"> <p class="p-1 ipdmini:pt-1 cursor-pointer hover:text-red-500" style="font-size: 12px;">Promotion</p> </a>
+    <img src="pic/zingerstack.png" alt="" class="w-16 mt-2 mx-auto my-auto rounded-full ipdmini:w-14 ipdmini:h-14">    
+
+</div>
+
+<div class="w-[90.33px] h-[112.3px] ipdmini:w-[200px]  iphone14:w-[117px] border-2 border-dotted border-white absolute bottom-0 right-0 rounded-lg">
+
+    <a href="#"> <p class="p-1 ipdmini:pt-1 cursor-pointer hover:text-red-500" style="font-size: 12px;">Sharing</p> </a>
+    <img src="pic/zingerstack.png" alt="" class="w-16 mt-2 mx-auto my-auto rounded-full ipdmini:w-14 ipdmini:h-14">    
+
+</div>
+
+</div>  <!--End Container  -->
+
+</div> <!-- Explore Menu -->
+
+ 
+
+                                      <!--Best Seller  -->
+
+<section id="Best-seller">                 
+
+<div class="lg:uppercase xll:text-2xl lgbig:text-3xl  iphonese:pl-4 lg:font-serif lg:font-bold lg:text-xl lg:mt-20 lg:p-5  Galaxyz:uppercase Galaxyz:font-serif Galaxyz:font-bold Galaxyz:text-base Galaxyz:mt-20  Galaxyz:p-2 ipdmini:px-6 ipdmini:text-xl" data-aos="fade-down" data-aos-duration="1000"  >
+
+    <p class="text-white">Best Seller</p>
+    <hr class="lg:w-[60px]  lg:border-2 lg:border-t lg:border-red-500 Galaxyz:w-[50px] Galaxyz:bottom-2 Galaxyz:border-t-2 Galaxyz:border-red-500 ">
+    
+</div>
+ <br>                                  
+
+
+                               <!--Container Images  -->
+
+<div class="container  iphonese:pl-3 ipdmini:px-4 ipdmini:grid ipdmini:grid-cols-3 ipdmini:gap-x-1 lg:grid lg:grid-cols-3 lg:gap-x-1 lg:mt-[-1px] mx-auto mt-10 overflow-x-auto lg:ml-0  Galaxyz:gap-x-52  Galaxyz:grid Galaxyz:grid-cols-3" data-aos="fade-down" data-aos-duration="1000">
+
+                                <!-- Box-Image-1 -->
+
+<div class="lg:w-72 lg:h-[440px] Galaxyz:relative lg:mx-auto lg:rounded-lg Galaxyz:rounded-lg Galaxyz:w-[200px] Galaxyz:h-[290px] Galaxyz:mx-auto" style="background: rgb(28, 24, 22);" >
+
+<div class="text-center lg:space-x-3 Galaxyz:mt-[3px]  Galaxyz:space-x-1 lg:mt-1">
+
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700  Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+
+</div>
+
+<div class="lg:mt-6 lg:ml-1 lg:text-xl lg:font-bold Galaxyz:font-bold  Galaxyz:text-base Galaxyz:ml-1 Galaxyz:mt-6 "><a href="" class="hover:underline">Krunch Burger</a></div>
+<div class="lg:mt-3 lg:text-xl bg-red-600 lg:w-[82px] lg:ml-[205px] ml-[230px] lg:p-2 lg:font-bold lg:rounded Galaxyz:absolute Galaxyz:right-0 Galaxyz:w-[60px]  Galaxyz:p-1 Galaxyz:mt-3 Galaxyz:rounded ">Rs 325</div>
+<div class="bg-transparent lg:mt-24 Galaxyz:mx-auto lg:mx-auto Galaxyz:mt-16"><img src="pic/krunch.jpeg" alt="" class="mx-auto rounded-full lg:w-56 lg:h-56 Galaxyz:w-32 Galaxyz:h-32"></div>
+
+</div>  <!-- End Div -->
+
+                                      <!-- Box-Image-2 -->
+
+<div class="lg:w-72 lg:h-[440px] Galaxyz:relative lg:mx-auto lg:rounded-lg Galaxyz:rounded-lg Galaxyz:w-[200px] Galaxyz:h-[290px] Galaxyz:mx-auto" style="background: rgb(28, 24, 22);" >
+
+<div class="text-center lg:space-x-3 Galaxyz:mt-[3px]  Galaxyz:space-x-1 lg:mt-1">
+                                        
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700  Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+
+</div>
+                                        
+<div class="lg:mt-6 lg:ml-1 lg:text-xl lg:font-bold Galaxyz:font-bold  Galaxyz:text-base Galaxyz:ml-1 Galaxyz:mt-6 "><a href="" class="hover:underline">Kentucky Burger</a></div>
+<div class="lg:mt-3 lg:text-xl bg-red-600 lg:w-[82px] lg:ml-[205px] ml-[230px] lg:p-2 lg:font-bold lg:rounded Galaxyz:absolute Galaxyz:right-0 Galaxyz:w-[60px]  Galaxyz:p-1 Galaxyz:mt-3 Galaxyz:rounded ">Rs 425</div>
+<div class="bg-transparent lg:mt-24 Galaxyz:mx-auto lg:mx-auto Galaxyz:mt-16"><img src="pic/krunch2.jpeg" alt="" class="mx-auto rounded-full lg:w-56 lg:h-56 Galaxyz:w-32 Galaxyz:h-32"></div>
+
+</div> <!-- End Div -->
+                                        
+
+                                 <!-- Box-Image-3 -->
+
+<div class="lg:w-72 lg:h-[440px] Galaxyz:relative lg:mx-auto lg:rounded-lg Galaxyz:rounded-lg Galaxyz:w-[200px] Galaxyz:h-[290px] Galaxyz:mx-auto" style="background: rgb(28, 24, 22);" >
+
+<div class="text-center lg:space-x-3 Galaxyz:mt-[3px]  Galaxyz:space-x-1 lg:mt-1">
+                                                                            
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700  Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+
+</div>
+                                                                            
+<div class="lg:mt-6 lg:ml-1 lg:text-xl lg:font-bold Galaxyz:font-bold  Galaxyz:text-base Galaxyz:ml-1 Galaxyz:mt-6 "><a href="" class="hover:underline">Crispy Chicken</a></div>
+<div class="lg:mt-3 lg:text-xl bg-red-600 lg:w-[82px] lg:ml-[205px] ml-[230px] lg:p-2 lg:font-bold lg:rounded Galaxyz:absolute Galaxyz:right-0 Galaxyz:w-[60px]  Galaxyz:p-1 Galaxyz:mt-3 Galaxyz:rounded ">Rs 999</div>
+<div class="bg-transparent lg:mt-24 Galaxyz:mx-auto lg:mx-auto Galaxyz:mt-16"><img src="pic/krunch3.webp" alt="" class="mx-auto rounded-full lg:w-56 lg:h-56 Galaxyz:w-32 Galaxyz:h-32"></div>
+
+</div> <!--Image-3 End  -->
+
+
+</div> <!--End Div  -->  
+
+</section>  <!--End Section  -->
+
+<br>
+
+                                      <!--Top Deals  -->
+
+
+                                    <!-- Top Deal Heading -->
+<section id="Top-Deals">                                 
+
+<div class="lg:uppercase xll:text-2xl lgbig:text-3xl  iphonese:pl-0 lg:font-serif lg:font-bold lg:text-xl lg:mt-20 lg:p-5  Galaxyz:uppercase Galaxyz:font-serif Galaxyz:font-bold Galaxyz:text-base Galaxyz:mt-20  Galaxyz:p-2 ipdmini:px-6 ipdmini:text-xl" data-aos="fade-down" data-aos-duration="1000">
+
+    <p class="text-white">Top Deals</p>
+    <hr class="lg:w-[60px]  lg:border-2 lg:border-t lg:border-red-500 Galaxyz:w-[50px] Galaxyz:bottom-2 Galaxyz:border-t-2 Galaxyz:border-red-500 ">
+
+</div>                   
+
+</section>  <!-- Top Deal Heading -->
+                                     
+
+<section class="shop"  data-aos="fade-down" data-aos-duration="1000">
+
+<div class="product-content xll:ml-24">
+
+                            <!--ProductBox-1  -->
+
+<div class="product-box  h-[460px]  relative rounded-md " style="background: rgb(28, 24, 22);">
+<div class="text-center lg:space-x-3 Galaxyz:mt-[3px]  Galaxyz:space-x-1 lg:mt-1">
+                                                                            
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700  Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+
+</div>
+
+<button id="favoriteButton-1" class="absolute top-0 right-0 px-2 py-2  text-white font-medium rounded-lg ">
+
+<svg id="heartIcon-1" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 not-favorite" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M11.998 21.838C-7.333 10.297 6.8-2.663 12 5.203c5.2-7.866 19.334 5.094 0 16.635z" />
+</svg>
+
+<span id="buttonText"></span>
+<!-- <span id="buttonText">Add to Favorites</span> -->
+</button>
+
+
+ <div class="img-box">
+    <img src="pic/krunch.jpeg" alt="">
+</div>
+
+<h2 class="product-title ml-2 text-white font-bold active:text-red-500 hover:cursor-pointer">Zinger Stacker Combo</h2>
+
+<p class="px-2 p-1 font-sans">1 Zinger Stacker + 1 Regular fries + 1 Regular drink</p>
+
+<div class="price-and-cart">
+    <span class="price text-xl font-medium ml-2 mt-4">$ 500</span>
+    <i class="add-cart"><img src="" alt="">+ ADD TO BUCKET </i>
+</div> 
+
+</div>    <!--End Image  -->
+
+
+
+                            <!--ProductBox-2  -->
+
+<div class="product-box  h-[460px]  relative rounded-md " style="background: rgb(28, 24, 22);">
+<div class="text-center lg:space-x-3 Galaxyz:mt-[3px]  Galaxyz:space-x-1 lg:mt-1">
+                                                                                                        
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700  Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+                                
+</div>
+                            
+<button id="favoriteButton-2" class="absolute top-0 right-0 px-2 py-2  text-white font-medium rounded-lg ">
+                
+<svg id="heartIcon-2" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 not-favorite" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M11.998 21.838C-7.333 10.297 6.8-2.663 12 5.203c5.2-7.866 19.334 5.094 0 16.635z" />
+</svg>
+
+<span id="buttonText"></span>
+<!-- <span id="buttonText">Add to Favorites</span> -->
+</button>
+                                               
+<div class="mt-[30px] w-[200px] rounded-3xl mx-auto">
+    <img src="pic/topDeals2.png" alt="">
+</div>
+                            
+
+<h2 class="product-title ml-2 text-white font-bold active:text-red-500 hover:cursor-pointer">Kentucky Fried Chicken</h2>
+<p class="px-2 p-1 font-sans">1 Zinger Stacker + 1 Regular fries and fresh veggies.</p>
+<div class="price-and-cart">
+<span class="price text-xl font-medium ml-2 mt-4">$ 250</span>
+<i class="add-cart"><img src="" alt="">+ ADD TO BUCKET </i>
+                            
+</div>
+</div>    <!--End Image  -->
+
+                            
+
+                               <!--ProductBox-3  -->
+
+<div class="product-box  h-[460px]  relative rounded-md " style="background: rgb(28, 24, 22);">
+<div class="text-center lg:space-x-3 Galaxyz:mt-[3px]  Galaxyz:space-x-1 lg:mt-1">
+                                                                            
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700  Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+</div>
+
+<button id="favoriteButton-3" class="absolute top-0 right-0 px-2 py-2  text-white font-medium rounded-lg ">
+                     
+<svg id="heartIcon-3" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 not-favorite" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M11.998 21.838C-7.333 10.297 6.8-2.663 12 5.203c5.2-7.866 19.334 5.094 0 16.635z" />
+</svg>
+
+<span id="buttonText"></span>
+<!-- <span id="buttonText">Add to Favorites</span> -->
+</button>
+
+
+
+<div class="img-box">
+    <img src="pic/topdeals3.png" alt="">
+</div>
+
+<h2 class="product-title ml-2 text-white font-bold active:text-red-500 hover:cursor-pointer">Zinger Combo</h2>
+
+<p class="px-2 p-1 font-sans">Spicy Zinger Burger with 1+ crunchy,with 1 cold drink.</p>
+
+<div class="price-and-cart">
+    <span class="price text-xl font-medium ml-2 mt-4">$ 450</span>
+    <i class="add-cart"><img src="" alt="">+ ADD TO BUCKET </i>
+</div>
+
+</div>    <!--End Image  -->
+
+
+                            <!--ProductBox-4  -->
+
+<div class="product-box  h-[460px]  relative rounded-md " style="background: rgb(28, 24, 22);">
+<div class="text-center lg:space-x-3 Galaxyz:mt-[3px]  Galaxyz:space-x-1 lg:mt-1">
+                                                                                                        
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700  Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+                                
+</div>
+                            
+
+<button id="favoriteButton-4" class="absolute top-0 right-0 px-2 py-2  text-white font-medium rounded-lg ">
+                    
+                            
+<svg id="heartIcon-4" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 not-favorite" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M11.998 21.838C-7.333 10.297 6.8-2.663 12 5.203c5.2-7.866 19.334 5.094 0 16.635z" />
+</svg>
+
+<span id="buttonText"></span>
+<!-- <span id="buttonText">Add to Favorites</span> -->
+</button>
+
+
+<div class="img-box">
+    <img src="pic/topdel4.png" alt="">
+</div>
+                            
+
+<h2 class="product-title ml-2 text-white font-bold active:text-red-500 hover:cursor-pointer">Signatue-Boxes</h2>
+<p class="px-2 p-1 font-sans">2 Zinger Stacker + 1 Regular fries + 1 Regular drink</p>
+
+<div class="price-and-cart">
+    <span class="price text-xl font-medium ml-2 mt-4">$ 300</span>
+    <i class="add-cart"><img src="" alt="">+ ADD TO BUCKET </i>
+
+</div>
+</div>    <!--End Image  -->
+
+                            
+                                <!--ProductBox-5  -->
+
+<div class="product-box lgbig:hidden xll:hidden h-[460px]  relative rounded-md " style="background: rgb(28, 24, 22);">
+<div class="text-center lg:space-x-3 Galaxyz:mt-[3px]  Galaxyz:space-x-1 lg:mt-1">
+                                                                            
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700  Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+</div>
+
+<button id="favoriteButton-5" class="absolute top-0 right-0 px-2 py-2  text-white font-medium rounded-lg ">
+                          
+<svg id="heartIcon-5" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 not-favorite" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M11.998 21.838C-7.333 10.297 6.8-2.663 12 5.203c5.2-7.866 19.334 5.094 0 16.635z" />
+</svg>
+
+<span id="buttonText"></span>
+<!-- <span id="buttonText">Add to Favorites</span> -->
+</button>
+
+
+<div class="img-box">
+    <img src="pic/topdeall5.png" alt="">
+</div>
+
+<h2 class="product-title ml-2 text-white font-bold active:text-red-500 hover:cursor-pointer">Chicken Fillet Combo </h2>
+<p class="px-2 p-1 font-sans">A crispy chicken burger with veggies,with a cold drink.</p>
+
+<div class="price-and-cart">
+    <span class="price text-xl font-medium ml-2 mt-4">$ 450</span>
+    <i class="add-cart"><img src="" alt="">+ ADD TO BUCKET </i>
+
+</div>
+
+</div>    <!--End Image  -->
+
+
+                                <!--ProductBox-6  -->
+
+<div class="product-box lgbig:hidden xll:hidden  h-[460px]  relative rounded-md " style="background: rgb(28, 24, 22);">
+<div class="text-center lg:space-x-3 Galaxyz:mt-[3px]  Galaxyz:space-x-1 lg:mt-1">
+                                                                                                                
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700  Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+    <span class="lg:w-12 lg:h-5 lg:p-1 bg-red-700 text-red-700 Galaxyz:w-8 Galaxyz:h-4 Galaxyz:p-1">.</span>
+</div>
+                                    
+<button id="favoriteButton-6" class="absolute top-0 right-0 px-2 py-2  text-white font-medium rounded-lg ">
+                    
+                 
+<svg id="heartIcon-6" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 not-favorite" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M11.998 21.838C-7.333 10.297 6.8-2.663 12 5.203c5.2-7.866 19.334 5.094 0 16.635z" />
+</svg>
+                    
+<span id="buttonText"></span>
+<!-- <span id="buttonText">Add to Favorites</span> -->
+</button>
+
+
+<div class="img-box">
+    <img src="pic/topdeal6.png" alt="">
+</div>
+                                    
+<h2 class="product-title ml-2 text-white font-bold active:text-red-500 hover:cursor-pointer">Classic Chicken Combo</h2>
+<p class="px-2 p-1 font-sans"> A simple yet flavorful Classic Chicken Burger with a cold drink.</p>
+                                    
+<div class="price-and-cart">
+    <span class="price text-xl font-medium ml-2 mt-4">$ 500</span>
+    <i class="add-cart"><img src="" alt="">+ ADD TO BUCKET </i>
+</div>
+</div>    <!--End Image  -->
+                                    
+
+<script src="addcart.js"></script>
+<script src="favorite.js"></script>
+
+</div>
+</section> <!--End Top Deals Section  -->
+
+<br> <br>
+                                           
+                                    <!--Pictures Section  -->
+
+                                               
+
+<section class="text-center" data-aos="fade-down"  data-aos-duration="3000">
+
+<div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xll:grid-cols-2 place-content-center p-8">
+
+                               <!-- Card 1 -->
+
+<div>
+
+<div class="flex overflow-hidden">
+    <img src="pic/picup-1.png" alt="" class="w-full rounded-xl transition duration-500">
+</div>
+
+</div>
+                                              
+     <!-- Card 2 -->
+
+<div>
+
+<div class="flex overflow-hidden">
+    <img src="pic/installap.png" alt="" class="w-full rounded-xl transition duration-500">
+</div>
+
+</div>
+                                              
+
+       <!-- Card 3 -->
+       
+<div>
+
+<div class="flex overflow-hidden">
+    <img src="pic/favoritr-1.png" alt="" class="w-full rounded-xl transition duration-500">
+</div>
+
+</div>
+                                              
+         <!-- Text and Button Card -->
+        
+<div class="p-6 bg-[#1C1816] rounded-xl text-center">
+
+<div>
+    <img src="pic/favoritr-1.png" alt="" class="rounded-xl w-24 sm:w-36 lg:w-48 xll:w-60 ipdmini:w-24 mx-auto">
+</div>
+
+<div class="max-w-md mx-auto">
+
+    <p class="mt-3 mb-4 text-sm font-bold font-serif sm:text-base lg:text-lg xll:text-xl ipdmini:text-sm xll:mt-10 xll:mb-5">Adding 11 herbs and spices, Explore our menu and add items to your cart.</p>
+    <a href="homepage.html" class="uppercase text-sm sm:text-base px-5 py-2 xll:text-xl text-white tracking-wide rounded-md bg-gradient-to-b from-[#93291E] to-[#ED213A] hover:opacity-90 active:ring-2 active:ring-red-600">Explore Menu</a>
+
+</div> <!--End  -->
+</div>
+
+</div>
+
+</section>  <!--End Section  -->
+
+<br> <br>
+         
+                                            <!-- Footer -->
+
+<section>
+
+<footer>
+
+<div class="bg-[#1C1816] pb-4 rounded-lg">
+
+<div class="footer-content ">
+
+<div class="footer-logo flex justify-center space-x-8 p-4 ipdmini:space-x-10 xll:justify-center xll:space-x-44">
+    <span class="uppercase font-serif font-extrabold text-2xl tracking-widest italic text-red-600"><a href="homepage.html">KFC</a></span>
+    
+<ul class="flex space-x-1 ipdmini:space-x-3 xll:space-x-10"> 
+    
+<a href="https://www.facebook.com/login/" target="_blank" class="facebook bg-[#3b5998] text-white p-1 rounded-full w-7 h-7 text-center hover:text-[#000] hover:transition:0.1s;">   
+    <i class="fa fa-facebook "></i>   
+</a>   
+
+<a href="https://x.com/i/flow/login?lang=en" target="_blank" class="twitter  bg-[#00acee] text-white p-1 rounded-full w-7 h-7 text-center hover:text-[#000] hover:transition:0.1s;">   
+    <i class="fa fa-twitter"></i>   
+</a>       
+
+<a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank" class="instagram bg-[#3f729b] text-white p-1 rounded-full w-7 h-7 text-center hover:text-[#000] hover:transition:0.1s;">   
+    <i class="fa fa-instagram"></i>   
+</a>                              
+
+<a href="https://www.youtube.com/" target="_blank"  class="youtube bg-[#f04843] text-white p-1 rounded-full w-7 h-7 text-center hover:text-[#000] hover:transition:0.1s;">   
+    <i class="fa fa-youtube"></i>  
+</a>     
+
+</ul> 
+
+</div> <!--Close Div  -->
+
+
+<div class="ipdmini:grid ipdmini:grid-cols-2 ipdmini:px-2 ">
+
+<div class="pl-4 pb-3 leading-7">
+
+<ul class="ipdmini:grid ipdmini:grid-cols-2 gap-x-6 lg:gap-x-8">
+
+<li><a href="#" class="hover:text-red-500 hover:underline">About us</a></li>
+<li><a href="#" class="hover:text-red-500 hover:underline">Mitao Bhook</a></li>
+<li><a href="#" class="hover:text-red-500 hover:underline">Mitao Bhook-Scholarship</a></li>
+<li><a href="#" class="hover:text-red-500 hover:underline" >Privacy-Policy</a></li>
+<li><a href="#" class="hover:text-red-500 hover:underline">Careers</a></li>
+<li><a href="#" class="hover:text-red-500 hover:underline">Contact us</a></li>
+<li><a href="#" class="hover:text-red-500 hover:underline">Store Location</a></li>
+<li><a href="#" class="hover:text-red-500 hover:underline">Track Order</a></li>
+<li><a href="#" class="hover:text-red-500 hover:underline">Terms & Conditions</a></li>
+
+</ul> 
+</div> <!--End div  -->
+
+                                      <!-- Playstore And Microsoft -->
+
+<div class="samsung8:flex samsung8:space-x-2  iphonese:pl-4 Galaxyz:pl-4  lg:justify-end">
+
+<div class=" border border-1 border-white w-7/12 flex bg-black text-white rounded mt-5 p-1  ipdmini:w-5/12 ipdmini:p-1 ipdmini:h-14 lg:w-4/12 lg:p-2 lg:h-14 lg:rounded-none lg:text-sm lg:leading-5 iphonese:w-5/12 iphonese:h-12 iphonese:text-sm xxl:text-xl xxl:h-20  xll:w-3/12">
+
+    <img src="pic/playstore.png" alt="" srcset="" class="w-[34px] h-[34px] my-auto  lg:w-[25px] lg:h-[25px] xl:w-[35px] xl:h-[35px]  " >
+    <span class="font-bold px-1"><a href="" class="hover:scale-50"></a>Get it on Google Play</span>
+
+</div> <!-- End div-->
+
+<div class="border border-1 border-white px-2 w-7/12 surfaceduo:text-sm flex bg-black text-white rounded mt-5 p-1 ipdmini:w-5/12 ipdmini:p-1 ipdmini:h-14 lg:w-4/12 lg:p-1 lg:h-14 lg:rounded-none lg:text-sm lg:leading-5 iphonese:w-5/12 iphonese:h-12 iphonese:text-sm xxl:text-xl xxl:h-20  xxl:rounded-none xll:w-3/12">
+    
+   <img src="pic/microsoft.png" alt="" srcset="" class="w-[34px] h-[34px] my-auto lg:w-[25px] lg:h-[25px]  xl:w-[35px] xl:h-[35px] " >
+   <span class="font-bold px-1"><a href="" class="hover:scale-50"></a>Get it from Microsoft</span> 
+
+</div>
+
+</div> <!-- End Microsoft/Playstore -->
+
+<div class="iphonese:pl-4 Galaxyz:pl-4">
+
+    <a href="#" class="font-serif text-red-500 hover:underline cursor-pointer mt-4 ">Powered by</a>
+    <h1 class="underline text-base tracking-wide ipdmini:w-64">SimpleX Technology Solutions</h1>
+
+</div>
+
+<p class="text-base tracking-wide ipdmini:w-[220px] ipdmini:ml-40 ipdmini:mt-6 iphonese:pl-4 Galaxyz:pl-4 lg:ml-64 xll:ml-[400px]">2025 KFC.All right reserved</p>
+
+</div>  
+</div> 
+</div>      <!--Footer-content End  -->
+
+</footer>    <!--End Footer  -->
+
+</section>
+
+
+
+
+</body>
+</html>
